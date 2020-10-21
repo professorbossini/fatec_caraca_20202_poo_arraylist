@@ -1,12 +1,12 @@
-public class VetorDinamico{
+public class VetorDinamicoString{
   private int quantidade;
   private int capacidade;
-  private int [] elementos;
+  private String [] elementos;
 
-  public VetorDinamico (){
+  public VetorDinamicoString (){
     this.quantidade = 0;
     this.capacidade = 4;
-    this.elementos = new int [this.capacidade];
+    this.elementos = new String [this.capacidade];
   }
 
   public boolean estaVazio (){
@@ -22,7 +22,7 @@ public class VetorDinamico{
     }
   }
 
-  public void adicionar (int e){
+  public void adicionar (String e){
     //esta cheio?
       //se estiver redimensiona
     //adicionar
@@ -57,7 +57,7 @@ public class VetorDinamico{
   }
 
   private void redimensionar (double fator){
-    int [] aux = new int [(int)(this.capacidade * fator)]; // 8 * 2.0 == 16.0 8 * 0.5 = 4.0
+    String [] aux = new String [(int)(this.capacidade * fator)]; // 8 * 2.0 == 16.0 8 * 0.5 = 4.0
     for (int i = 0; i < this.quantidade; i++){
       aux[i] = this.elementos[i];
     }
